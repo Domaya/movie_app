@@ -7,14 +7,14 @@ function Movie({year, title, summary, poster, genres}){
     <div className ="movie">
         <img src={poster} alt={title} title={title}/>
       <div className ="movie_data">
-        <h3 className ="movies_title">{title}</h3>
-        <h5 className ="movies_year">{year}</h5>
-        <ul className ="genres">
+        <h3 className ="movies__title">{title}</h3>
+        <h5 className ="movies__year">{year}</h5>
+        <ul className ="movie__genres">
           {genres.map((genre, index) => (
-            <li key={index} className="genres_genre">{genre}</li>
+            <li key={index} className="genres__genre">{genre}</li>
           ))}
         </ul>
-        <p className ="movie_summary">{summary}</p>
+        <p className ="movie__summary">{summary.slice(0,180)}...</p>
         
       </div>
     </div>
